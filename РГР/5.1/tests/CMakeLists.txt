@@ -1,0 +1,11 @@
+add_executable(unit_tests test_cezar.c)
+include_directories(${PROJECT_SOURCE_DIR}/src)
+target_link_libraries(unit_tests cezar)
+
+add_test(NAME CaesarTest_Basic COMMAND unit_tests basic)
+add_test(NAME CaesarTest_Empty COMMAND unit_tests empty)
+add_test(NAME CaesarTest_Special COMMAND unit_tests special)
+add_test(NAME CaesarTest_Wrap COMMAND unit_tests wrap)
+add_test(NAME CaesarTest_Negative COMMAND unit_tests negative)
+add_test(NAME CaesarTest_Long COMMAND unit_tests long)
+add_test(NAME CaesarTest_Mixed COMMAND unit_tests mixed)
